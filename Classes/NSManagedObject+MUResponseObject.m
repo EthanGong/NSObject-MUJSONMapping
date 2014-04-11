@@ -1,12 +1,11 @@
 //
-//  NSManagedObject+JSONInit.m
-//  Paragraph
+// NSManagedObject+MUResponseObject.h
 //
 //  Created by Martin Ulianko on 09/04/14.
 //  Copyright (c) 2014 Martin Ulianko. All rights reserved.
 //
 
-#import "NSManagedObject+JSONInit.h"
+#import "NSManagedObject+MUResponseObject.h"
 #import <NSObject+MUJSONMapping.h>
 
 @implementation NSManagedObject (MUResponseObject)

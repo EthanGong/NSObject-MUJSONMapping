@@ -1,6 +1,5 @@
 //
-//  NSManagedObject+JSONInit.h
-//  Paragraph
+//  NSManagedObject+MUResponseObject.h
 //
 //  Created by Martin Ulianko on 09/04/14.
 //  Copyright (c) 2014 Martin Ulianko. All rights reserved.
