@@ -30,6 +30,8 @@ We have model like this
 We need to specify propertyMap keys for properties which called differently from the JSON structure
 
 ```Objective-c
+
+//FBWork.m
 - (NSDictionary *)propertyMap
 {
     return @{@"id": @"ident",
@@ -42,6 +44,7 @@ We need to specify propertyMap keys for properties which called differently from
 And we also need specify which type of objects contains array work. 
 
 ```Objective-c
+//FBWork.m
 - (Class)classForElementsInArrayProperty:(NSString *)propertyName
 {
     return [FBWork class];
