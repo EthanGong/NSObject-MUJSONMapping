@@ -94,7 +94,7 @@ If you are using AFNetworking give a look at  <a href="https://github.com/Uliank
 
 ```ruby
 platform :ios, '7.0'
-pod "AFNetworking-MUResponseSerializer"
+pod "NSObject-MUJSONMapping"
 ```
 
 ## Contact
