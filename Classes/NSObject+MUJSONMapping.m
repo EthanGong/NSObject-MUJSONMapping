@@ -150,7 +150,7 @@
     // custom classes
     else
     {
-        object = [self validateObject:[[propertyClass alloc] initWithJSON:JSON]
+        object = [self validateObject:[[propertyClass alloc] initWithJSON:object]
                       forPropertyName:propertyName
                             withClass:propertyClass];
         
