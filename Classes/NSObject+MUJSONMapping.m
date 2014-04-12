@@ -134,7 +134,7 @@
             NSMutableArray *array = [NSMutableArray arrayWithCapacity:[(NSArray *)object count]];
             for (id item in (NSArray *)object)
             {
-                [array addObject:[self objectForPropertyClass:elementClass withJSON:item]];
+                [array addObject:[[elementClass alloc] initWithJSON:item]];
             }
             
             object = [self validateObject:array forPropertyName:propertyName withClass:propertyClass];
@@ -150,7 +150,7 @@
     // custom classes
     else
     {
-        object = [self validateObject:[self objectForPropertyClass:propertyClass withJSON:object]
+        object = [self validateObject:[[propertyClass alloc] initWithJSON:JSON]
                       forPropertyName:propertyName
                             withClass:propertyClass];
         
@@ -160,23 +160,6 @@
     
     [self didChangeValueForKey:propertyName];
     
-}
-
-- (id)objectForPropertyClass:(Class)propertyClass withJSON:(id)JSON
-{
-    id newObj = nil;
-    
-    if([propertyClass methodForSelector:@selector(initWithJSON:)])
-    {
-        newObj = [[propertyClass alloc] initWithJSON:JSON];
-    }
-    else
-    {
-        newObj = [[propertyClass alloc] init];
-        [newObj fillWithJSON:JSON];
-    }
-    
-    return propertyClass;
 }
 
 - (void)setValuesToProperties:(NSDictionary *)propertyValues
